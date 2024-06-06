@@ -3,10 +3,12 @@ package br.com.project.curriculo_aos.service;
 import br.com.project.curriculo_aos.model.HardSkill;
 import br.com.project.curriculo_aos.repository.HardSkillRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class HardSkillService {
     @Autowired
     private HardSkillRepository hardSkillRepository;

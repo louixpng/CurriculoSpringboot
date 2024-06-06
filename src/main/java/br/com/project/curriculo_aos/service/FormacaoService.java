@@ -3,10 +3,12 @@ package br.com.project.curriculo_aos.service;
 import br.com.project.curriculo_aos.model.Formacao;
 import br.com.project.curriculo_aos.repository.FormacaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class FormacaoService {
     @Autowired
     private FormacaoRepository formacaoRepository;
