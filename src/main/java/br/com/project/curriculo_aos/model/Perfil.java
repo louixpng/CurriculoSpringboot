@@ -20,6 +20,7 @@ public class Perfil {
     private String idPerfil;
     private String nome;
     private int idade;
+    @Column(length = 5000)
     private String descricao;
 
     @JsonManagedReference

@@ -17,8 +17,8 @@ public class Formacao {
     private String idFormacao;
     private String instituicao;
     private String titulo;
-    private String anoInicio;
-    private String anoConclusao;
+    private int anoInicio;
+    private int anoConclusao;
 
     @JsonBackReference
     @ManyToOne
@@ -28,7 +28,7 @@ public class Formacao {
 
     public Formacao () {}
 
-    public Formacao (String idFormacao, String instituicao, String titulo, String anoInicio, String anoConclusao, Perfil perfil) {
+    public Formacao (String idFormacao, String instituicao, String titulo, int anoInicio, int anoConclusao, Perfil perfil) {
         this.idFormacao = idFormacao;
         this.instituicao = instituicao;
         this.titulo = titulo;
