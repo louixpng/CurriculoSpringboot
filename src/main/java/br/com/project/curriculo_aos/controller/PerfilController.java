@@ -20,6 +20,16 @@ public class PerfilController {
         return this.perfilService.listarTodosPerfis();
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Perfil> buscarPerfilPorId(@PathVariable String id) {
+        Optional<Perfil> perfil = this.perfilService.buscarPerfilPorId(id);
+        if(perfil.isPresent()){
+            return ResponseEntity.ok(perfil.get());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
     @PostMapping
     public Perfil criarPerfil (@RequestBody Perfil perfil) {
         return this.perfilService.criarPerfil(perfil);
